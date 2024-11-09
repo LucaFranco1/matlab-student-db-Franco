@@ -1,0 +1,31 @@
+classdef Student
+    properties
+        student_id
+        first_name
+        last_name 
+        age = ""
+        GPA = ""
+        major = ""
+    end
+     methods
+        function res = initStudent(currentObj)
+            % Get information from user's i/o
+            currentObj.student_id = input("What's the ID of the Student","s");
+            currentObj.first_name = input("What's the first name of the Student","s");
+            currentObj.last_name = input("What's the last name of the Student","s");
+            currentObj.age = input("What's the age of the Student","s");
+            currentObj.GPA = input("What's the GPA of the Student","s");
+            currentObj.major = input("What's the major of the Student","s");
+            res = currentObj;
+        end
+        function res = showStudent(currentObj)
+            fprintf("Student ID: %s \n", currentObj.student_id)
+            fprintf("Student First Name: %s \n", currentObj.first_name)
+            fprintf("Student Last Name: %s \n", currentObj.last_name)
+            fprintf("Student Age: %s \n", currentObj.age)
+            fprintf("Student GPA: %s \n", currentObj.GPA)
+            fprintf("Student Major: %s \n", currentObj.major)
+            res = 1;
+        end
+    end
+end
